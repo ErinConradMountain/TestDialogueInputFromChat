@@ -1,0 +1,29 @@
+body {
+  font-family: sans-serif;
+  margin: 20px;
+}
+#topics {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.topic {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.thumb {
+  width: 100px;
+  height: auto;
+}
+#conversation {
+  white-space: pre-wrap;
+}
+.note {
+  margin-top: 20px;
+  padding: 10px;
+  background: #f0f0f0;
+}
+nav button {
+  margin-left: 10px;
+}
