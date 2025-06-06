@@ -1,0 +1,19 @@
+{
+  "name": "testdialogueinputfromchat",
+  "version": "1.0.0",
+  "description": "This project contains exported ChatGPT conversations organized into a small journal.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "eslint": "^9.28.0"
+  }
+}
