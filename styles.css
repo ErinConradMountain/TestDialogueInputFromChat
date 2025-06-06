@@ -28,3 +28,19 @@ h1 {
   height: auto;
   border: 1px solid #eee;
 }
+
+#mainImage {
+  transition: transform 0.2s;
+  max-width: 90%;
+  display: block;
+  margin: 0 auto;
+}
+
+.photo-controls {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.photo-controls button {
+  margin: 0 5px;
+}
