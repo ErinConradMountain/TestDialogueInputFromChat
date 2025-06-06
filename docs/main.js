@@ -4,6 +4,20 @@
  *
  * Learner Note: This is the expected format.
  */
+function getSnippet(convo) {
+  const messages = Object.values(convo.mapping)
+    .map((m) => m.message)
+    .filter(Boolean)
+    .sort((a, b) => a.create_time - b.create_time);
+  for (const msg of messages) {
+    const parts = msg.content?.parts;
+    if (Array.isArray(parts) && parts.length) {
+      return parts[0].slice(0, 100);
+    }
+  }
+  return "";
+}
+
 function loadTopics() {
   const images = [
     "../images/file-72jQ6thojeuUeE7Kd8A1t7-IMG_2ACDECCE-CF79-481B-8AD6-AC6C6C6F27FB.jpeg",
@@ -26,8 +40,11 @@ function loadTopics() {
         const link = document.createElement("a");
         link.href = `topic.html?id=${idx}`;
         link.textContent = c.title || `Conversation ${idx + 1}`;
+        const snippet = document.createElement("p");
+        snippet.textContent = getSnippet(c);
         div.appendChild(img);
         div.appendChild(link);
+        div.appendChild(snippet);
         list.appendChild(div);
       });
     });

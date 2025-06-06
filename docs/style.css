@@ -16,6 +16,10 @@ body {
   width: 100px;
   height: auto;
 }
+.topic p {
+  margin: 0;
+  font-size: 0.9em;
+}
 #conversation {
   white-space: pre-wrap;
 }
