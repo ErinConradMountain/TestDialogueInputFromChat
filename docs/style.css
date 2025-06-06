@@ -1,0 +1,13 @@
+body {
+  font-family: sans-serif;
+  margin: 20px;
+}
+
+.thumb {
+  width: 100px;
+  height: auto;
+}
+
+#conversation {
+  white-space: pre-wrap;
+}
