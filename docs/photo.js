@@ -13,27 +13,28 @@ document.addEventListener("DOMContentLoaded", () => {
    *
    * @returns {void}
    */
-  function updateTransform() {
+  function applyTransform() {
     img.style.transform = `rotate(${rotation}deg) scale(${scale})`;
   }
 
   document.getElementById("rotateLeft").onclick = () => {
-    rotation -= 90;
-    updateTransform();
+    rotation = (rotation - 90) % 360;
+    applyTransform();
   };
 
   document.getElementById("rotateRight").onclick = () => {
-    rotation += 90;
-    updateTransform();
+    rotation = (rotation + 90) % 360;
+    applyTransform();
   };
 
-  img.addEventListener("wheel", (e) => {
-    e.preventDefault();
-    if (e.deltaY < 0) {
-      scale = Math.min(scale + 0.1, 3);
-    } else {
-      scale = Math.max(scale - 0.1, 0.5);
-    }
-    updateTransform();
-  });
+  img.addEventListener(
+    "wheel",
+    (e) => {
+      e.preventDefault();
+      scale += e.deltaY < 0 ? 0.1 : -0.1;
+      scale = Math.min(Math.max(scale, 0.5), 3);
+      applyTransform();
+    },
+    { passive: false },
+  );
 });
