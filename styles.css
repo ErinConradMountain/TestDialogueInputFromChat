@@ -1,0 +1,30 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+#entry-list {
+  list-style: none;
+  padding: 0;
+}
+
+.entry {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+#photos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+#photos img {
+  max-width: 200px;
+  height: auto;
+  border: 1px solid #eee;
+}
