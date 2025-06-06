@@ -16,7 +16,10 @@ async function loadEntries() {
 }
 
 /**
- * Loads photos from the images directory.
+ * Loads photos from the images directory and links each one to
+ * its dedicated article page.
+ *
+ * @returns {void}
  */
 function loadPhotos() {
   const container = document.getElementById("photos");
@@ -27,10 +30,13 @@ function loadPhotos() {
     "images/journal-photo4.jpeg",
     "images/journal-photo5.jpeg",
   ];
-  photos.forEach((src) => {
+  photos.forEach((src, idx) => {
+    const link = document.createElement("a");
+    link.href = `docs/photo${idx + 1}.html`;
     const img = document.createElement("img");
     img.src = src;
-    container.appendChild(img);
+    link.appendChild(img);
+    container.appendChild(link);
   });
 }
 
