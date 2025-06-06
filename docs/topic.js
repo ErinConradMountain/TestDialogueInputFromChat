@@ -78,5 +78,7 @@ function handleNavigation(idx, count) {
 
 document.addEventListener("DOMContentLoaded", () => {
   const id = parseInt(getParam("id"), 10);
-  if (!isNaN(id)) loadConversation(id);
+  if (!isNaN(id)) {
+    loadConversation(id);
+  }
 });

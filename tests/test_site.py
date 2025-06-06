@@ -1,6 +1,7 @@
-"""Placeholder tests for journal site.
+"""Placeholder tests for standalone topic pages.
 
-Learner Note: Add real tests covering navigation and note saving."""
+Learner Note: This file should eventually contain tests verifying that each
+page renders text and images correctly."""
 
 def test_placeholder():
     """TODO: implement tests."""
